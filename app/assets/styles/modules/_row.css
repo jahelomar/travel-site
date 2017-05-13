@@ -1,0 +1,45 @@
+.row {
+  @mixin clearfix;
+  
+  &--gutters {
+    margin-right: -65px
+  }
+  
+  /*the > is used to interact with the child elements*/
+  &--gutters > div {
+    padding-right: 65px;
+    /*the padding will be applied but wont affect the calc. with value *see the &__4 &__8 the total width is 100%*   box-sizing: border-box; see global.css */
+  
+  }
+  
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+  
+  @mixin atMedium {
+  
+  &__b-margin-until-medium {
+    margin-bottom: 0;
+  }
+    
+  &__medium-4 {
+    float: left;
+    width: 33.33%;
+  }
+    
+    &__medium-4--larger {
+      width: 37%;
+    }  
+  
+  &__medium-8 {
+    float: left;
+    width: 66.66%;
+  }
+    
+    &__medium-8--smaller {
+      width: 63%;
+    }
+    
+  }
+  
+} 
