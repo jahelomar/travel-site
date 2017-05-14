@@ -2,14 +2,21 @@
   @mixin clearfix;
   
   &--gutters {
-    margin-right: -65px
+    margin-right: -65px;
+  }
+  
+  &--gutters-large {
+    margin-right: -100px;
   }
   
   /*the > is used to interact with the child elements*/
   &--gutters > div {
     padding-right: 65px;
-    /*the padding will be applied but wont affect the calc. with value *see the &__4 &__8 the total width is 100%*   box-sizing: border-box; see global.css */
+    /*the padding will be applied but wont affect the calc. with value *see the &__4 &__8 the total width is 100%*   box-sizing: border-box; see global.css */  
+  }
   
+  &--gutters-large > div {
+    padding-right: 100px;
   }
   
   &__b-margin-until-medium {
@@ -30,6 +37,11 @@
     &__medium-4--larger {
       width: 37%;
     }  
+    
+    &__medium-6 {
+      float: left;
+      width: 50%;
+    }
   
   &__medium-8 {
     float: left;
